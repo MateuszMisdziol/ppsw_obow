@@ -1,0 +1,7 @@
+--cpu ARM7TDMI
+".\startup.o"
+".\main.o"
+--strict --scatter ".\Lancuchy_znakowe-konwersje.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Lancuchy_znakowe-konwersje.map" -o .\Lancuchy_znakowe-konwersje.axf

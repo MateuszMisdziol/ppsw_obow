@@ -1,0 +1,21 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\STUDIA\Podstawy programowania systemow wbudowanych\GIT\program_obowiazkowy\Dekodowanie_komunikatow\dekodowanie_komunikatow.uvproj
+Project File Date:  04/02/2019
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling dekodowanie_komunikatow.c...
+dekodowanie_komunikatow.c(58): error:  #20: identifier "eState" is undefined
+dekodowanie_komunikatow.c(86): error:  #40: expected an identifier
+dekodowanie_komunikatow.c(86): error:  #18: expected a ")"
+dekodowanie_komunikatow.c(86): error:  #40: expected an identifier
+dekodowanie_komunikatow.c(86): error:  #65: expected a ";"
+dekodowanie_komunikatow.c(121): warning:  #1-D: last line of file ends without a newline
+dekodowanie_komunikatow.c(121): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+".\dekodowanie_komunikatow.axf" - 5 Errors, 2 Warning(s).
+Target not created
