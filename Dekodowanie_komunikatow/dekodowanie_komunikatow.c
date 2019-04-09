@@ -119,3 +119,5 @@ void DecodeTokens(void){
 		}
 	}
 }
+
+//troll xDDDDDDDDD
