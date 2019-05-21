@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\dekodowanie_komunikatow.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\dekodowanie_komunikatow.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed May 15 00:21:26 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue May 21 19:31:39 2019
 <BR><P>
-<H3>Maximum Stack Usage =         36 bytes + Unknown(Functions without stacksize, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         28 bytes + Unknown(Functions without stacksize, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; DecodeMsg &rArr; DecodeTokens &rArr; eStringToKeyword
+main &rArr; DecodeTokens &rArr; eStringToKeyword
 <P>
 <H3>
 Functions with no stack information
@@ -156,10 +156,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eStringToKeyword
 </UL>
 
-<P><STRONG><a name="[17]"></a>ucFindTokensInString</STRONG> (ARM, 216 bytes, Stack size 8 bytes, dekodowanie_komunikatow.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ucFindTokensInString
-</UL>
-<BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeMsg
+<P><STRONG><a name="[17]"></a>ucFindTokensInString</STRONG> (ARM, 216 bytes, Stack size 8 bytes, dekodowanie_komunikatow.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeMsg
 </UL>
 
 <P><STRONG><a name="[12]"></a>eStringToKeyword</STRONG> (ARM, 104 bytes, Stack size 16 bytes, dekodowanie_komunikatow.o(.text))
@@ -174,7 +172,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeTokens
 </UL>
 
-<P><STRONG><a name="[18]"></a>ReplaceCharactersInString</STRONG> (ARM, 52 bytes, Stack size 0 bytes, dekodowanie_komunikatow.o(.text))
+<P><STRONG><a name="[18]"></a>ReplaceCharactersInString</STRONG> (ARM, 52 bytes, Stack size 0 bytes, dekodowanie_komunikatow.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeMsg
 </UL>
 
@@ -184,23 +182,20 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eHexStringToUInt
 <LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eStringToKeyword
 </UL>
-<BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeMsg
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeMsg
 </UL>
 
-<P><STRONG><a name="[16]"></a>DecodeMsg</STRONG> (ARM, 52 bytes, Stack size 8 bytes, dekodowanie_komunikatow.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = DecodeMsg &rArr; DecodeTokens &rArr; eStringToKeyword
-</UL>
-<BR>[Calls]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeTokens
+<P><STRONG><a name="[16]"></a>DecodeMsg</STRONG> (ARM, 52 bytes, Stack size 8 bytes, dekodowanie_komunikatow.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeTokens
 <LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReplaceCharactersInString
 <LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ucFindTokensInString
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
 
-<P><STRONG><a name="[2]"></a>main</STRONG> (ARM, 24 bytes, Stack size 4 bytes, dekodowanie_komunikatow.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = main &rArr; DecodeMsg &rArr; DecodeTokens &rArr; eStringToKeyword
+<P><STRONG><a name="[2]"></a>main</STRONG> (ARM, 20 bytes, Stack size 4 bytes, dekodowanie_komunikatow.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = main &rArr; DecodeTokens &rArr; eStringToKeyword
 </UL>
-<BR>[Calls]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeMsg
+<BR>[Calls]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DecodeTokens
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
 </UL>

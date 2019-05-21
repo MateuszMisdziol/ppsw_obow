@@ -42,6 +42,12 @@ void ReplaceCharactersInString(char pcString[], char cOldChar, char cNewChar){
   }
 }
 
+  char cTestSource_1[] = "test1";
+	char cTestDestination_1[] = "";
+
 int main(void){
+  
+
+	CopyString(cTestSource_1, cTestDestination_1);
   
 }

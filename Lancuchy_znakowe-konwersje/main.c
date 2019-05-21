@@ -2,22 +2,6 @@
 
 enum Result {OK, ERROR};
 
-unsigned int xCorrect = 0;
-char StrCorrect[7] = "0xF47B";
-enum Result eCorrect;
-unsigned int xShort = 0;
-char StrShort[7] = "0xA7";
-enum Result eShort;
-unsigned int xLong = 0;
-char StrLong[8] = "0xF47BC4";
-enum Result eLong;
-unsigned int xBadCharacter = 0;
-char StrBadCharacter[7] = "0xF47J";
-enum Result eBadCharacter;
-unsigned int xNo0x = 0;
-char StrNo0x[7] = "F47B";
-enum Result eNo0x;
-
 
 void UIntToHexStr (unsigned int uiValue, char pcStr[]){
 
@@ -38,7 +22,7 @@ void UIntToHexStr (unsigned int uiValue, char pcStr[]){
 			pcStr[5-ucTetradaCounter] = ucCurrentTetrada + '0'; //w ascii '0' == 48
 		}
 	}
-	pcStr[6] = '\0';
+	pcStr[6] = 'f';
 }
 
 enum Result eHexStringToUInt(char pcStr[], unsigned int *puiValue){
@@ -77,12 +61,13 @@ void AppendUIntToString (unsigned int uiValue, char pcDestinationStr[]){
 	UIntToHexStr(uiValue, pcDestinationStr+PointerNumber);
 }
 
+unsigned int uiTestDestination;
+enum Result eReturnResult;
+
 int main(void){
   
-  eCorrect = eHexStringToUInt(StrCorrect, &xCorrect);
-  eShort = eHexStringToUInt(StrShort, &xShort);
-  eLong = eHexStringToUInt(StrLong, &xLong);
-  eBadCharacter = eHexStringToUInt(StrBadCharacter, &xBadCharacter);
-  eNo0x = eHexStringToUInt(StrNo0x, &xNo0x);
+
+  
+  eReturnResult = eHexStringToUInt("0x*", &uiTestDestination);
   
 }
